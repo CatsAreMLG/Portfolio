@@ -17,6 +17,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'coderay'
 gem 'redcarpet', '~> 3.2.2'
+gem 'disqus'
 
 group :development, :test do
   gem 'byebug', platform: :mri
