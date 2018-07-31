@@ -38,21 +38,21 @@
 ## Modeling our Data
 
   **Post**
-    title:string
-    content:text
+    - title:string
+    - content:text
 
   **Project**
-    title:string
-    description:text
-    link:string
+    - title:string
+    - description:text
+    - link:string
 
   **User**
 
 ## Think through the pages we need in our application
 
-  -Home
-  -Posts#index
-  -Posts#show
-  -Projects#index
-  -Projects#show
-  -Contact
+  - Home
+  - Posts#index
+  - Posts#show
+  - Projects#index
+  - Projects#show
+  - Contact
