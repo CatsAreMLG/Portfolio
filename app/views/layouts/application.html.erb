@@ -14,7 +14,7 @@
 
   <body>
     <header id="main_navigation" class="clearfix">
-      <a href="#" class="name">Joshua Gonzalez</a>
+      <%= link_to "Joshua Gonzalez", root_path, class: "name" %>
       <nav>
         <%= link_to "Articles", posts_path %>
         <a href="projects.html">Projects</a>
@@ -22,5 +22,13 @@
       </nav>
     </header>
     <%= yield %>
+    <footer id="main_footer">
+      <p class="copyright">&copy; 2018 Joshua Gonzalez</p>
+      <nav>
+        <a href="http://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="http://github.com/catsaremlg" target="_blank"><i class="fab fa-github-alt"></i></a>
+        <a href="http://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a>
+      </nav>
+    </footer>
   </body>
 </html>
