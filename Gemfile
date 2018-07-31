@@ -19,6 +19,7 @@ gem 'coderay'
 gem 'redcarpet', '~> 3.2.2'
 gem 'disqus'
 gem 'friendly_id', '~> 5.1.0'
+gem 'will_paginate', '~> 3.1'
 
 group :development, :test do
   gem 'byebug', platform: :mri
