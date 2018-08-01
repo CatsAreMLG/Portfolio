@@ -1,22 +1,22 @@
 <div class="wrapper wrapper_padding  clearfix">
   <div class="col-1 about homepage_content">
-    <h2>About</h2>
-    <hr>
+    <h2 class="phone_title">About</h2>
+    <hr class="phone_disabled">
     <p>I'm a full-stack web developer living in San Antonio, Texas.</p>
     <p>In my usual day, I get breakfast and work on a few on my solo projects finishing my day off with experimenting with different application of my knowledge.</p>
     <p>You can find me on <a href="https://github.com/CatsAreMLG">My Github</a>.</p>
   </div>
   <div class="col-2 homepage_content">
-    <h2>Stuff I've Written</h2>
-    <hr>
+    <h2 class="phone_title">Stuff I've Written</h2>
+    <hr class="phone_disabled">
     <% @posts.each do |post| %>
       <h3><%= link_to post.title, post %></h3>
       <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
     <% end %>
   </div>
   <div class="col-3 homepage_content">
-    <h2>Stuff I've Built</h2>
-    <hr>
+    <h2 class="phone_title">Stuff I've Built</h2>
+    <hr class="phone_disabled">
     <% @projects.each do |project| %>
       <h3><%= link_to project.title, project %></h3>
       <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>

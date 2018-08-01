@@ -1,4 +1,5 @@
 @import 'normalize';
+$phone: "only screen and (max-width : 560px)";
 $dark: #424652;
 $white: #fff;
 $light: #9a9da4;
@@ -17,6 +18,9 @@ body {
 .wrapper {
   width: 90%;
   margin: 0 auto;
+  @media #{$phone} {
+    width: 100%;
+  }
 }
 
 .skinny_wrapper {
@@ -27,6 +31,9 @@ body {
 
 .wrapper_padding {
   padding: 4rem 0;
+  @media #{$phone} {
+    padding-top: 0;
+  }
 }
 
 .clearfix:before,
@@ -90,6 +97,10 @@ hr {
 #main_navigation {
   padding: 2.5em 5%;
   border-bottom: 1px solid $border;
+  @media #{$phone} {
+    padding: 2.5em 0 0 0;
+    border: none;
+  }
   .name {
     font-weight: 700;
     font-size: 0.8em;
@@ -100,6 +111,11 @@ hr {
     text-decoration: none;
     color: $dark;
     float: left;
+    @media #{$phone} {
+      margin: 0 33.333%;
+      letter-spacing: 2px;
+      text-align: center;
+    }
   }
   nav {
     float: right;
@@ -109,7 +125,46 @@ hr {
       text-decoration: none;
       margin: 0 1rem;
       font-size: 1rem;
+      @media #{$phone} {
+        float: left;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 1em;
+        border-bottom: 1px solid $border;
+        &:first-of-type {
+          border-top: 1px solid $border;
+        }
+      }
     }
+    @media #{$phone} {
+      float: left;
+      width: 100%;
+      padding-top: 2.5rem;
+    }
+  }
+}
+
+.phone_disabled {
+  @media #{$phone} {
+    display: none;
+  }
+}
+
+.col-1 .phone_title {
+  @media #{$phone} {
+    border-top: 0 !important;
+  }
+}
+
+.phone_title {
+  @media #{$phone} {
+    text-align: center !important;
+    border-bottom: 1px solid $border !important;
+    border-top: 1px solid $border !important;
+    padding: 3em 0 !important;
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
   }
 }
 
@@ -208,3 +263,4 @@ input[type="submit"], .button {
 
 @import "welcome";
 @import "post_project";
+@import "contacts"

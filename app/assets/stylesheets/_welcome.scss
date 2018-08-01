@@ -1,5 +1,10 @@
 .col-1, .col-2, .col-3 {
   float: left;
+  @media #{$phone} {
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
 }
 
 .col-1 {
@@ -16,6 +21,10 @@
   h2 {
     font-size: 1.1rem;
     text-transform: uppercase;
+    @media #{$phone} {
+      margin-top: 0;
+      margin-bottom: 1.66em;
+    }
   }
   h3 {
     font-size: 1.35em;

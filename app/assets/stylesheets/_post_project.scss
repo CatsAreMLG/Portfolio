@@ -1,4 +1,4 @@
-#post_wrapper {
+#post_wrapper, #project_wrapper {
   padding: 3em 0;
   .post {
     text-align: center;
@@ -26,7 +26,7 @@
 
 //------------------------- Posts Show
 
-#post_show_content {
+#post_show_content, #project_show_description {
   header {
     text-align: center;
     .date {
@@ -105,4 +105,8 @@
       background: $white;
     }
   }
+}
+
+pre {
+  white-space: pre-wrap;
 }
