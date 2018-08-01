@@ -1,5 +1,10 @@
 @import 'normalize';
 $phone: "only screen and (max-width : 560px)";
+$iphone_678: "only screen and (max-width : 414px)";
+$iphone_x: "only screen and (max-width : 375px)";
+$gs5_phone: "only screen and (max-width : 360px)";
+$small_phone: "only screen and (max-width : 350px)";
+$iphone_se: "only screen and (max-width : 320px)";
 $dark: #424652;
 $white: #fff;
 $light: #9a9da4;
@@ -116,6 +121,21 @@ hr {
       letter-spacing: 2px;
       text-align: center;
     }
+    @media #{$iphone_678} {
+      margin: 0 27%;
+    }
+    @media #{$iphone_x} {
+      margin: 0 24.5%;
+    }
+    @media #{$gs5_phone} {
+      margin: 0 23.5%;
+    }
+    @media #{$small_phone} {
+      margin: 0 23%;
+    }
+    @media #{$small_phone} {
+      margin: 0 20.5%;
+    }
   }
   nav {
     float: right;
@@ -177,6 +197,7 @@ hr {
 }
 
 #main_footer {
+  height: 100px;
   padding: 2.5em 5%;
   border-top: 1px solid $border;
   .copyright {
@@ -186,6 +207,7 @@ hr {
   }
   nav {
     float: right;
+    margin-top: 2.5px;
     i {
       color: $dark;
       margin-left: 1em;

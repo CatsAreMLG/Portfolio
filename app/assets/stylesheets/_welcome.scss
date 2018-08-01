@@ -46,6 +46,15 @@
   p {
     margin: 0 0 .75em 0;
   }
+  p {
+    @media #{$phone} {
+      width: 90%;
+      margin: 0 auto .75em auto;
+      &:last-of-type {
+        margin-bottom: 1.5em;
+      }
+    }
+  }
 }
 .about {
   padding: 0 7.5% 0 0;
