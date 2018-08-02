@@ -13,6 +13,15 @@ $complimentary_1: #70aeff;
 $complimentary_2: #9ED3BC;
 $red: #e67076;
 $border: #e9e9e9;
+$size-full: 100%;
+$time-full: 1s;
+$size-base: 1em;
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
 
 * {
   box-sizing: border-box;
@@ -26,7 +35,7 @@ body {
   width: 90%;
   margin: 0 auto;
   @media #{$phone} {
-    width: 100%;
+    width: $size-full;
   }
 }
 
@@ -100,6 +109,9 @@ hr {
   border-top: 2px solid $highlight;
   margin: 2em 0;
 }
+a {
+  text-decoration: none;
+}
 ::selection {
   color: $white;
   background: $complimentary_2;
@@ -159,7 +171,7 @@ hr {
       }
       @media #{$phone} {
         float: left;
-        width: 100%;
+        width: $size-full;
         margin: 0 auto;
         text-align: center;
         padding: 1em;
@@ -171,7 +183,7 @@ hr {
     }
     @media #{$phone} {
       float: left;
-      width: 100%;
+      width: $size-full;
       padding-top: 2.5rem;
     }
   }
@@ -245,11 +257,23 @@ hr {
     text-transform: uppercase;
     text-decoration: none;
   }
+  .edit {
+    &:hover {
+      color: $highlight;
+      border: 2px solid $highlight;
+    }
+  }
+  .delete {
+    &:hover {
+      color: $red;
+      border: 2px solid $red;
+    }
+  }
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
-  width: 100%;
-  max-width: 100%;
+  width: $size-full;
+  max-width: $size-full;
   height: 3em;
   border: 2px solid $border;
   padding: 1em;
@@ -261,7 +285,7 @@ textarea {
   resize: vertical;
 }
 
-input[type="submit"], .button {
+.button {
   outline: none;
   background: transparent;
   border: 2px solid $border;
@@ -276,18 +300,22 @@ input[type="submit"], .button {
   }
 }
 
+input[type="submit"] {
+  outline: none;
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-size: 1em;
+  color: $highlight;
+  text-decoration: none;
+  padding: 0;
+}
+
 .color_button {
   background: $highlight;
   color: $white;
   text-decoration: none;
   padding: 1em 2em;
-}
-
-.btn-red {
-  &:hover {
-    color: $red;
-    border: 2px solid $red;
-  }
 }
 
 .button_wrapper {
@@ -298,6 +326,53 @@ input[type="submit"], .button {
 .input_wrapper {
   margin: 0;
   text-align: center;
+}
+
+.c2 {
+  position: relative;
+  padding: $size-base;
+  border-color: $highlight;
+  color: $highlight;
+  cursor: pointer;
+  border-style: solid;
+  transition: $time-full / 4 ease;
+  overflow: hidden;
+  background-color: transparent;
+  a {
+    color: $highlight;
+    transition: $time-full / 4 ease;
+  }
+  input[type="submit"] {
+    color: $highlight;
+    transition: $time-full / 4 ease;
+  }
+  &:hover {
+    color: $white;
+    a {
+      color: $white;
+    }
+    input[type="submit"] {
+      color: $white;
+      cursor: pointer;
+    }
+  }
+  &:after {
+    transition: $time-full / 4 ease;
+    width: $size-full * 1.5;
+		height: $size-full * 4;
+    border-radius: $size-full;
+    background-color: $highlight;
+    z-index: -1;
+		content: "";
+		position: absolute;
+		@include transform(translate(-$size-full / 2));
+    top: $size-full;
+    left: $size-full * 1.25;
+  }
+  &:hover:after {
+    top: -$size-full;
+    left: $size-full / 2;
+  }
 }
 
 @import "welcome";
