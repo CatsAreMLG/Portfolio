@@ -8,11 +8,13 @@
 }
 
 .col-1 {
+  animation: $time-full / 1.5 ease-in-out $time-full * 0 1 slideInFromLeft;
   width: 45%;
   padding: 0 5% 0 2.5%;
 }
 
 .col-2, .col-3 {
+  animation: $time-full / 1.5 ease-in-out $time-full * 0 1 slideInFromRight;
   width: 27.5%;
   padding: 0 2.5%;
 }

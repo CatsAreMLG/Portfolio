@@ -20,7 +20,33 @@ $size-base: 1em;
 @mixin transform($property) {
   -webkit-transform: $property;
   -ms-transform: $property;
+  -o-transform: $property;
   transform: $property;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    @include transform(translateY(-110%));
+  }
+  100% {
+    @include transform(translateY(0));
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    @include transform(translateX(-200%));
+  }
+  100% {
+    @include transform(translateX(0));
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    @include transform(translateX(300%));
+  }
+  100% {
+    @include transform(translateX(0));
+  }
 }
 
 * {
@@ -124,6 +150,7 @@ a {
 }
 
 #main_navigation {
+  animation: $time-full / 1.5 ease-in-out $time-full * 0 1 slideInFromTop;
   padding: 2.5em 5%;
   border-bottom: 1px solid $border;
   @media #{$phone} {
@@ -229,6 +256,7 @@ a {
 }
 
 #main_footer {
+  animation: $time-full / 1.5 ease-out $time-full * 0 1 slideInFromBottom;
   height: 100px;
   padding: 2.5em 5%;
   border-top: 1px solid $border;
