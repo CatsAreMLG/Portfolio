@@ -6,7 +6,7 @@ $gs5_phone: "only screen and (max-width : 360px)";
 $small_phone: "only screen and (max-width : 350px)";
 $iphone_se: "only screen and (max-width : 320px)";
 $dark: #424652;
-$white: #fff;
+$white: #fffcf9;
 $light: #9a9da4;
 $highlight: #bea0de;
 $complimentary_1: #70aeff;
@@ -25,10 +25,12 @@ $size-base: 1em;
 
 * {
   box-sizing: border-box;
+  transition: all ease-in-out $time-full / 5;
 }
 
 body {
   font-family: raleway, sans-serif;
+  background: $white;
 }
 
 .wrapper {
@@ -75,6 +77,10 @@ body {
 h1, h2, h3, h4, h5, h6, p, ul, li {
   color: $dark;
 }
+h1, h2, h4, h5, h6 {
+  text-shadow: -0.09em 0 red, 0.09em 0 cyan;
+  letter-spacing: 1px;
+}
 
 h1 {
   font-size: 2.5rem;
@@ -107,7 +113,7 @@ hr {
   height: 2px;
   border: 0;
   border-top: 2px solid $highlight;
-  margin: 2em 0;
+  margin: 2em auto 2em 0;
 }
 a {
   text-decoration: none;
@@ -130,10 +136,12 @@ a {
     letter-spacing: 4px;
     text-transform: uppercase;
     border: 2px solid $border;
+    text-shadow: -0.09em 0 red, 0.09em 0 cyan;
     padding: 1rem;
     text-decoration: none;
     color: $dark;
     float: left;
+    transition: all ease-in-out $time-full / 4;
     &:hover{
       border: 2px solid $highlight;
     }
@@ -167,7 +175,7 @@ a {
       margin: 0 1rem;
       font-size: 1rem;
       &:hover{
-        color: $highlight;
+        text-shadow: -0.06em 0 red, 0.06em 0 cyan;
       }
       @media #{$phone} {
         float: left;

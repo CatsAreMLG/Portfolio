@@ -2,6 +2,12 @@
   padding: 3em 0;
   .post {
     text-align: center;
+      h2 a {
+        transition: ease-in-out $time-full / 6;
+        &:hover {
+          text-shadow: none;
+        }
+      }
     .date {
       font-size: .9em;
       margin: 0;
@@ -13,8 +19,9 @@
       a {
         text-decoration: none;
         color: $dark;
+        text-shadow: none;
         &:hover {
-          color: $highlight;
+          text-shadow: -0.09em 0 red, 0.09em 0 cyan;
         }
       }
     }
@@ -43,6 +50,9 @@
   }
   hr {
     margin: 3em auto;
+  }
+  h2 {
+    text-shadow: none;
   }
 }
 
