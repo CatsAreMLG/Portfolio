@@ -262,12 +262,18 @@ textarea {
 }
 
 input[type="submit"], .button {
-  background: $highlight;
-  color: $white;
+  outline: none;
+  background: transparent;
+  border: 2px solid $border;
+  text-align: center;
+  font-size: 1em;
+  color: $dark;
   text-decoration: none;
   padding: 1em 2em;
-  border: none;
-  cursor: pointer;
+  &:hover {
+    border: 2px solid $highlight;
+    color: $highlight;
+  }
 }
 
 .color_button {
@@ -275,8 +281,6 @@ input[type="submit"], .button {
   color: $white;
   text-decoration: none;
   padding: 1em 2em;
-  border: none;
-  cursor: pointer;
 }
 
 .btn-red {
