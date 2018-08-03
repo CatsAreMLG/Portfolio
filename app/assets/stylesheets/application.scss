@@ -20,6 +20,7 @@ $size-base: 1em;
 @mixin transform($property) {
   -webkit-transform: $property;
   -ms-transform: $property;
+  -moz-transform: $property;
   -o-transform: $property;
   transform: $property;
 }
@@ -57,6 +58,24 @@ $size-base: 1em;
 body {
   font-family: raleway, sans-serif;
   background: $white;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: .5em;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: $light;
+}
+::-webkit-scrollbar-thumb:active {
+    background: $dark;
+}
+
+.overflow_wrapper {
+  overflow-x: hidden;
 }
 
 .wrapper {
