@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Joshua Gonzalez">
     <meta name="twitter:card" content="<%= asset_path 'blurry.jpg' %>">
-    <meta name="twitter:site" content="https://calm-gorge-58619.herokuapp.com/">
+    <meta name="twitter:site" content="https://catsaremlg.herokuapp.com/">
     <meta name="twitter:title" content="Joshua Gonzalez - Full Stack Developer">
     <meta name="twitter:description" content="Full Stack Web Developer Portfolio and Blog of Joshua Gonzalez">
     <meta name="twitter:image" content="<%= asset_path 'favicon.png' %>">
@@ -34,6 +34,7 @@
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
         <% end %>
       </nav>
+      <image src="<%= asset_path 'iso.svg' %>" width="25%"></image>
     </header>
 
     <% if notice %>
