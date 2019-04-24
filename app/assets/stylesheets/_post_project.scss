@@ -1,15 +1,16 @@
-#post_wrapper, #project_wrapper {
+#post_wrapper,
+#project_wrapper {
   padding: 3em 0;
   .post {
     text-align: center;
-      h2 a {
-        transition: ease-in-out $time-full / 6;
-        &:hover {
-          text-shadow: none;
-        }
+    h2 a {
+      transition: ease-in-out $time-full / 6;
+      &:hover {
+        text-shadow: none;
       }
+    }
     .date {
-      font-size: .9em;
+      font-size: 0.9em;
       margin: 0;
     }
     h2 {
@@ -32,15 +33,17 @@
 }
 
 //------------------------- Posts Show
+//------------------------- Posts Show
 
-#post_show_content, #project_show_description {
+#post_show_content,
+#project_show_description {
   header {
     text-align: center;
     @media #{$phone} {
       margin-top: 3em;
     }
     .date {
-      font-size: .9em;
+      font-size: 0.9em;
       color: $light;
       margin: 0;
     }
@@ -64,7 +67,7 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $dark;
-    font-size: .8em;
+    font-size: 0.8em;
   }
   i {
     color: $dark;
@@ -80,7 +83,7 @@
 
 .pagination:before,
 .pagination:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -91,15 +94,18 @@
 .pagination {
   text-align: center;
   margin: 0 0 3em 0;
-  a, .previous_page, .current, .next_page {
-    padding: .75em 1em;
-    margin: 0 .5em;
-    border-radius: .15em;
+  a,
+  .previous_page,
+  .current,
+  .next_page {
+    padding: 0.75em 1em;
+    margin: 0 0.5em;
+    border-radius: 0.15em;
     line-height: 20px;
     text-decoration: none;
     background: $white;
     font-weight: 700;
-    font-size: .7em;
+    font-size: 0.7em;
     font-style: normal;
     color: $dark;
     &:hover {
@@ -112,7 +118,7 @@
     color: $white;
   }
   .disabled {
-    color: #C0C0C0;
+    color: #c0c0c0;
     &:hover {
       color: #c0c0c0;
       background: $white;
