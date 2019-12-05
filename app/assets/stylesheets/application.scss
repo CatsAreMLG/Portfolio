@@ -29,22 +29,27 @@ $size-base: 1em;
   0% {
     @include transform(translateY(-110%));
   }
+
   100% {
     @include transform(translateY(0));
   }
 }
+
 @keyframes slideInFromLeft {
   0% {
     @include transform(translateX(-200%));
   }
+
   100% {
     @include transform(translateX(0));
   }
 }
+
 @keyframes slideInFromRight {
   0% {
     @include transform(translateX(300%));
   }
+
   100% {
     @include transform(translateX(0));
   }
@@ -62,16 +67,19 @@ body {
 
 // Scrollbar
 ::-webkit-scrollbar {
-    width: .5em;
+  width: .5em;
 }
+
 ::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-    background: $light;
+  background: $light;
 }
+
 ::-webkit-scrollbar-thumb:active {
-    background: $dark;
+  background: $dark;
 }
 
 .overflow_wrapper {
@@ -81,6 +89,7 @@ body {
 .wrapper {
   width: 90%;
   margin: 0 auto;
+
   @media #{$phone} {
     width: $size-full;
   }
@@ -94,6 +103,7 @@ body {
 
 .wrapper_padding {
   padding: 4rem 0;
+
   @media #{$phone} {
     padding-top: 0;
   }
@@ -113,45 +123,70 @@ body {
   display: none;
 }
 
-.notice, .alert {
+.notice,
+.alert {
   text-align: center;
   padding: 1em 0;
   border-bottom: 1px solid $border;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
   color: $dark;
 }
-h1, h2, h4, h5, h6 {
-  text-shadow: -0.09em 0 red, 0.09em 0 cyan;
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+  text-shadow: -0.09em 0 rgba(red, 0.5), 0.09em 0 rgba(cyan, 0.5);
   letter-spacing: 1px;
 }
 
 h1 {
   font-size: 2.5rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.75rem;
 }
+
 h4 {
   font-size: 1.375rem;
 }
+
 h5 {
   font-size: 1.25rem;
 }
+
 h6 {
   font-size: 1rem;
 }
-p, li {
+
+p,
+li {
   font-size: 1.1rem;
   line-height: 1.75;
 }
-p, ul, ol {
+
+p,
+ul,
+ol {
   margin: 0 0 1.6em 0;
 }
+
 hr {
   width: 3em;
   display: block;
@@ -160,9 +195,11 @@ hr {
   border-top: 2px solid $highlight;
   margin: 2em auto 2em 0;
 }
+
 a {
   text-decoration: none;
 }
+
 ::selection {
   color: $white;
   background: $complimentary_2;
@@ -172,57 +209,70 @@ a {
   animation: $time-full / 1.5 ease-in-out $time-full * 0 1 slideInFromTop;
   padding: 2.5em 5%;
   border-bottom: 1px solid $border;
+
   @media #{$phone} {
     padding: 2.5em 0 0 0;
     border: none;
   }
+
   .name {
     font-weight: 700;
     font-size: 0.8em;
     letter-spacing: 4px;
     text-transform: uppercase;
     border: 2px solid $border;
-    text-shadow: -0.09em 0 red, 0.09em 0 cyan;
+    // text-shadow: -0.09em 0 red, 0.09em 0 cyan;
     padding: 1rem;
     text-decoration: none;
     color: $dark;
     float: left;
     transition: all ease-in-out $time-full / 4;
-    &:hover{
+
+    &:hover {
       border: 2px solid $highlight;
     }
+
     @media #{$phone} {
       margin: 0 33.333%;
       letter-spacing: 2px;
       text-align: center;
     }
+
     @media #{$iphone_678} {
       margin: 0 27%;
     }
+
     @media #{$iphone_x} {
       margin: 0 24.5%;
     }
+
     @media #{$gs5_phone} {
       margin: 0 23.5%;
     }
+
     @media #{$small_phone} {
       margin: 0 23%;
     }
+
     @media #{$small_phone} {
       margin: 0 20.5%;
     }
   }
+
   nav {
     float: right;
     padding-top: .95rem;
+
     a {
       color: $dark;
       text-decoration: none;
       margin: 0 1rem;
       font-size: 1rem;
-      &:hover{
-        text-shadow: -0.06em 0 red, 0.06em 0 cyan;
+
+      &:hover {
+        color: $highlight;
       }
+
       @media #{$phone} {
         float: left;
         width: $size-full;
@@ -230,11 +280,13 @@ a {
         text-align: center;
         padding: 1em;
         border-bottom: 1px solid $border;
+
         &:first-of-type {
           border-top: 1px solid $border;
         }
       }
     }
+
     @media #{$phone} {
       float: left;
       width: $size-full;
@@ -279,18 +331,22 @@ a {
   height: 100px;
   padding: 2.5em 5%;
   border-top: 1px solid $border;
+
   .copyright {
     float: left;
     font-size: .9em;
     margin: 0;
   }
+
   nav {
     float: right;
     margin-top: 2.5px;
+
     i {
       color: $dark;
       margin-left: 1em;
       padding-top: .2em;
+
       &:hover {
         color: $highlight;
       }
@@ -304,6 +360,7 @@ a {
   text-align: center;
   padding: 2em 0;
   margin: 3em 0;
+
   a {
     color: $light;
     margin: 0 1em;
@@ -312,12 +369,14 @@ a {
     text-transform: uppercase;
     text-decoration: none;
   }
+
   .edit {
     &:hover {
       color: $highlight;
       border: 2px solid $highlight;
     }
   }
+
   .delete {
     &:hover {
       color: $red;
@@ -326,7 +385,10 @@ a {
   }
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
   width: $size-full;
   max-width: $size-full;
   height: 3em;
@@ -349,6 +411,7 @@ textarea {
   color: $dark;
   text-decoration: none;
   padding: 1em 2em;
+
   &:hover {
     border: 2px solid $highlight;
     color: $highlight;
@@ -393,37 +456,44 @@ input[type="submit"] {
   transition: $time-full / 4 ease;
   overflow: hidden;
   background-color: transparent;
+
   a {
     color: $highlight;
     transition: $time-full / 4 ease;
   }
+
   input[type="submit"] {
     color: $highlight;
     transition: $time-full / 4 ease;
   }
+
   &:hover {
     color: $white;
+
     a {
       color: $white;
     }
+
     input[type="submit"] {
       color: $white;
       cursor: pointer;
     }
   }
+
   &:after {
     transition: $time-full / 4 ease;
     width: $size-full * 1.5;
-		height: $size-full * 4;
+    height: $size-full * 4;
     border-radius: $size-full;
     background-color: $highlight;
     z-index: -1;
-		content: "";
-		position: absolute;
-		@include transform(translate(-$size-full / 2));
+    content: "";
+    position: absolute;
+    @include transform(translate(-$size-full / 2));
     top: $size-full;
     left: $size-full * 1.25;
   }
+
   &:hover:after {
     top: -$size-full;
     left: $size-full / 2;
